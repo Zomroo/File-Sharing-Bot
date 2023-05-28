@@ -45,17 +45,6 @@ try:
 except ValueError:
     raise Exception("Your Admins list does not contain valid integers.")
 
-# Add multiple owner IDs to the ADMINS list
-ADMINS += [5500572462]
-
-# Convert the ADMINS list to a set to remove duplicates
-ADMINS = list(set(ADMINS))
-
-# Raise an exception if the OWNER_ID is not in the ADMINS list
-if OWNER_ID not in ADMINS:
-    raise Exception("OWNER_ID is not in the ADMINS list.")
-
-
 #Force sub message 
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
 
