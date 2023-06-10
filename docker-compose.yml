@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   my-app:
-    image: Rishu:latest
+    image: rishu:latest
     build:
       context: .
       dockerfile: Dockerfile
