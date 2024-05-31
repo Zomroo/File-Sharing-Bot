@@ -10,40 +10,42 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5615528335:AAFrJcGIItkdEvMZREvOi3LgLKeNHu9Md2c")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7162920629:AAHlFoKiOUVYapCFa2sYcS1eE8pRWfMGUn8")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "15849735"))
+APP_ID = int(os.environ.get("APP_ID", "22505271"))
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "b8105dc4c17419dfd4165ecf1d0bc100")
+API_HASH = os.environ.get("API_HASH", "c89a94fcfda4bc06524d0903977fc81e")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001887980095"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001844102954"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "-1001646246141"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "6413149181"))
 
 #Port
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Bot:Bot@cluster0.kse2h.mongodb.net/?retryWrites=true&w=majority")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Dist:Dist@cluster0.eufigtv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCESUB_CHANNEL = int(os.environ.get("FORCESUB_CHANNEL", "0"))
+FORCESUB_CHANNEL2 = int(os.environ.get("FORCESUB_CHANNEL2", "0"))
+FORCESUB_CHANNEL3 = int(os.environ.get("FORCESUB_CHANNEL3", "0"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI am a file storage bot for Ofstash. Please avoid spamming this chat. Also, make sure to join @Desi_Ocean .")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "5500572462 5589385763").split()):
+    for x in (os.environ.get("ADMINS", "6230326750").split()):
         ADMINS.append(int(x))
 except ValueError:
-    raise Exception("Your Admins list does not contain valid integers.")
+        raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
@@ -52,7 +54,7 @@ FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 
 #set True if you want to prevent users from forwarding files from bot
-PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" else False
+PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
 
 #Set true if you want Disable your Channel Posts Share button
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
@@ -61,7 +63,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(5500572462)
+ADMINS.append(1250450587)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
